@@ -25,10 +25,14 @@ class Vector(object):
         self.components = components
 
     def __getitem__(self, key):
-        return 0 if key >= self.dimensions else self.components[key]
+        return self.components[key]
 
     def __str__(self):
         return self.components.__str__()
+
+    def __len__(self):
+        return self.dimensions
+
 
 
 ## ----------------------------------------------------------------------
