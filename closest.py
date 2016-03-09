@@ -46,9 +46,6 @@ def closest_pair(points):
 
 class Grid(object):
 
-    grid = None
-    mesh_size = None
-
     def __init__(self, vectors, mesh_size, dimensions):
         self.grid = Mdict(dimensions)
         self.mesh_size = mesh_size
@@ -79,10 +76,8 @@ class Grid(object):
 
 class Mdict():
 
-    depth = None
-    map = None
-
     def __init__(self, depth):
+        self.depth = depth
         tree = lambda x: defaultdict(list) if x == 1 else defaultdict(lambda: tree(x-1))
         self.map = tree(depth)
 

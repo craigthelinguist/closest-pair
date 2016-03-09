@@ -13,9 +13,6 @@ import math
 
 class Vector(object):
 
-    dimensions = None
-    components = None
-
     def __init__(self, components):
         if not isinstance(components, tuple) and not isinstance(components, list):
             raise ValueError("Components must be a tuple or list.")
